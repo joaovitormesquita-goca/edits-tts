@@ -1,0 +1,1022 @@
+[
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 62.1,
+    "end": 68.5,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 62.1,
+  "hook_perdido": false,
+  "justificativa": "As menções de oferta relâmpago e direcionamento de link ocorrem apenas no final do vídeo, permitindo cortar o desfecho e manter mais de 60 segundos de demonstração limpa.",
+  "hook_sugerido": null,
+  "name": "@agnesdaltoe--7681051134458465557",
+  "dur": 68.5
+ },
+ {
+  "categoria": "RENARRAR",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 13.3,
+    "motivo": "preco"
+   },
+   {
+    "start": 18.8,
+    "end": 23.0,
+    "motivo": "preco"
+   },
+   {
+    "start": 23.2,
+    "end": 27.9,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 4.8,
+  "hook_perdido": true,
+  "justificativa": "O vídeo é focado quase que inteiramente em preços e valores específicos, restando menos de 8 segundos de conteúdo aproveitável.",
+  "hook_sugerido": "Gente, olha que bolsa mais perfeita da Gocase que acabou de chegar pra mim!",
+  "name": "@alicianuns_--7656499195012009224",
+  "dur": 27.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 11.6,
+    "motivo": "ambos"
+   },
+   {
+    "start": 24.6,
+    "end": 32.8,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 12.3,
+  "hook_perdido": true,
+  "justificativa": "O início foca em valores e carrinho laranja, e o encerramento cita link no perfil e promoção, restando um miolo limpo e coerente sobre a mala.",
+  "hook_sugerido": "Amiga, para tudo e vem ver de perto essa mala de bordo perfeita da Gocase!",
+  "name": "@alicianuns_--7658460546416643336",
+  "dur": 32.8
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 0.7,
+    "end": 9.6,
+    "motivo": "ambos"
+   },
+   {
+    "start": 23.2,
+    "end": 26.5,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 19.7,
+  "hook_perdido": true,
+  "justificativa": "O vídeo tem violações de preço e TikTok no hook inicial e em um trecho no miolo, mas a remoção de ambos preserva quase 20s de conteúdo de alta qualidade sobre a mala.",
+  "hook_sugerido": "Amigas, olhem essa malinha de mão premium da JoyPro que é simplesmente perfeita!",
+  "name": "@alicianuns_--7659843900021984530",
+  "dur": 33.1
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.8,
+    "end": 5.6,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 16.5,
+  "hook_perdido": true,
+  "justificativa": "O início cita preço e a plataforma TikTok, restando mais de 16 segundos contínuos e limpos com foco na qualidade do produto.",
+  "hook_sugerido": "Amigas, olha o que finalmente voltou pro estoque da Gocase!",
+  "name": "@alicianuns_--7678760228720151815",
+  "dur": 22.2
+ },
+ {
+  "categoria": "RENARRAR",
+  "remover": [
+   {
+    "start": 1.0,
+    "end": 13.5,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 2.5,
+  "hook_perdido": true,
+  "justificativa": "O vídeo inteiro é baseado na menção de preços, desconto e na plataforma TikTok, restando menos de 8s de conteúdo limpo.",
+  "hook_sugerido": "Amigas, olha essa necessaire perfeita da Gocase original, é super espaçosa!",
+  "name": "@alicianuns_--7678761350482365704",
+  "dur": 13.5
+ },
+ {
+  "categoria": "RENARRAR",
+  "remover": [
+   {
+    "start": 4.6,
+    "end": 8.6,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 4.6,
+  "hook_perdido": false,
+  "justificativa": "As menções ao TikTok e ao link ocupam toda a segunda metade do vídeo, deixando apenas 4,6s de conteúdo limpo.",
+  "hook_sugerido": null,
+  "name": "@alicianuns_--7679123395702754578",
+  "dur": 8.6
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.4,
+    "end": 7.8,
+    "motivo": "ambos"
+   },
+   {
+    "start": 19.3,
+    "end": 24.6,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 11.0,
+  "hook_perdido": true,
+  "justificativa": "O início cita preço e TikTok e o final traz CTA direcionando para link na plataforma, restando 11s contínuos e limpos de demonstração da bolsa.",
+  "hook_sugerido": "Meninas, finalmente encontrei a bolsa perfeita que cabe absolutamente tudo pro dia a dia!",
+  "name": "@alicianuns_--7680271106300726536",
+  "dur": 24.6
+ },
+ {
+  "categoria": "RENARRAR",
+  "remover": [
+   {
+    "start": 0.5,
+    "end": 7.7,
+    "motivo": "ambos"
+   },
+   {
+    "start": 12.3,
+    "end": 18.4,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 4.1,
+  "hook_perdido": true,
+  "justificativa": "O vídeo possui menções a preço e TikTok no início e no final, deixando apenas 4,1 segundos de conteúdo limpo, o que exige renarrar.",
+  "hook_sugerido": "Amigas, vocês precisam ver de perto a perfeição desse Touch Moon da Gocase!",
+  "name": "@alicianuns_--7681082627125808392",
+  "dur": 18.4
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.0,
+    "end": 11.9,
+    "motivo": "ambos"
+   },
+   {
+    "start": 50.2,
+    "end": 65.2,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 38.3,
+  "hook_perdido": true,
+  "justificativa": "O início cita TikTok Shop e desconto de 30%, e o final menciona preço promocional e carrinho laranja, restando um miolo contínuo de 38s focado nas características do produto.",
+  "hook_sugerido": "Olha os detalhes dessa bolsa da Gocase que fez fila no lançamento e todo mundo estava esperando!",
+  "name": "@alinecavanellas--7668416445637840148",
+  "dur": 65.2
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 3.5,
+  "hook_perdido": false,
+  "justificativa": "O vídeo não contém menções a preço ou ao TikTok, estando totalmente limpo para uso.",
+  "hook_sugerido": null,
+  "name": "@amaby_alves--7678759688107724039",
+  "dur": 3.5
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.6,
+    "end": 12.8,
+    "motivo": "ambos"
+   },
+   {
+    "start": 76.8,
+    "end": 81.9,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 63.5,
+  "hook_perdido": true,
+  "justificativa": "As violações de preço e menções ao TikTok estão restritas ao início e ao fim, permitindo um corte limpo com mais de 63 segundos de miolo útil.",
+  "hook_sugerido": "Essa é simplesmente a melhor bolsa da vida e eu uso ela para absolutamente tudo!",
+  "name": "@anavieira1802--7676925766675844370",
+  "dur": 81.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.2,
+    "end": 11.9,
+    "motivo": "ambos"
+   },
+   {
+    "start": 74.3,
+    "end": 78.6,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 62.3,
+  "hook_perdido": true,
+  "justificativa": "As violações de preço e menção ao TikTok estão concentradas no início e no fim, restando um miolo limpo e demonstrativo de mais de 60 segundos.",
+  "hook_sugerido": "Essa é a bolsa perfeita para quem passa o dia todo fora e precisa levar tudo com praticidade.",
+  "name": "@anavieira1802--7681528518433328402",
+  "dur": 78.6
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 55.0,
+    "end": 63.6,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 54.7,
+  "hook_perdido": false,
+  "justificativa": "O vídeo apresenta violação de menção ao TikTok Shop, comparação de preço e carrinho laranja apenas no trecho final, preservando um miolo longo e o hook inicial intactos.",
+  "hook_sugerido": null,
+  "name": "@ba.heck--7662726763839032597",
+  "dur": 63.6
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 3.4,
+    "end": 5.7,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 14.9,
+  "hook_perdido": false,
+  "justificativa": "Há uma menção isolada ao TikTok e comparação de preço no meio do vídeo que pode ser cortada sem prejudicar a introdução e a análise do produto.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7605003768454778119",
+  "dur": 17.2
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 34.7,
+    "end": 39.8,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 48.5,
+  "hook_perdido": false,
+  "justificativa": "A citação ao TikTok Shop comparando preço com o site oficial está isolada no meio e sua remoção mantém o vídeo fluido e coerente.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7619025043070242056",
+  "dur": 53.6
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 3.7,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 25.2,
+  "hook_perdido": true,
+  "justificativa": "A menção ao TikTok ocorre apenas no gancho inicial e ao cortá-lo restam mais de 25 segundos de conteúdo limpo demonstrando o produto.",
+  "hook_sugerido": "Olha só essa bolsa linda que acabou de chegar e eu vou mostrar tudinho o que cabe nela!",
+  "name": "@bae.carolina--7623111585195756807",
+  "dur": 28.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 26.1,
+    "end": 34.3,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 26.0,
+  "hook_perdido": false,
+  "justificativa": "O vídeo é totalmente limpo e detalhado até os 26.1s, concentrando menções a preço e TikTok Shop apenas no final.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7623574947406941447",
+  "dur": 34.3
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 11.4,
+  "hook_perdido": false,
+  "justificativa": "O áudio contém apenas letra de música de fundo sem nenhuma menção a preço ou à plataforma TikTok.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7629485628274625799",
+  "dur": 11.4
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 20.6,
+    "end": 24.9,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 32.9,
+  "hook_perdido": false,
+  "justificativa": "A menção ao TikTok Shop e a comparação de preço com o site estão isoladas no meio do vídeo, podendo ser cortadas mantendo o review coerente.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7630883722648096018",
+  "dur": 37.2
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 28.1,
+  "hook_perdido": false,
+  "justificativa": "O vídeo foca exclusivamente na capacidade, organização e detalhes da bolsa, sem citar preços ou o TikTok.",
+  "hook_sugerido": null,
+  "name": "@bae.carolina--7641683398578195732",
+  "dur": 28.1
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 10.7,
+    "motivo": "ambos"
+   },
+   {
+    "start": 68.1,
+    "end": 73.1,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 57.3,
+  "hook_perdido": true,
+  "justificativa": "Cortes necessários apenas no início e no final por menção a carrinho laranja, comparação de preço e CTA proibido, mantendo um miolo de review excelente.",
+  "hook_sugerido": "Essa bolsa da Gocase é a mais vendida de todas e eu vou te provar o porquê!",
+  "name": "@bbrualvess--7680303338793078024",
+  "dur": 73.1
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 25.3,
+    "end": 34.0,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 24.8,
+  "hook_perdido": false,
+  "justificativa": "As menções ao TikTok Shop, preços, desconto e link ocorrem apenas no final do vídeo, mantendo o início e a demonstração intactos.",
+  "hook_sugerido": null,
+  "name": "@camilacoelhotiktok--7665518875517242640",
+  "dur": 34.0
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 33.3,
+    "end": 39.4,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 33.0,
+  "hook_perdido": false,
+  "justificativa": "As violações sobre oferta de lançamento e link no perfil ocorrem apenas no final do vídeo, permitindo manter o restante intacto.",
+  "name": "@camilacoelhotiktok--7674057695045061904",
+  "dur": 39.4
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 3.4,
+  "hook_perdido": false,
+  "justificativa": "O áudio não contém nenhuma menção a preços, promoções ou referências ao TikTok.",
+  "hook_sugerido": null,
+  "name": "@carollsoarsn--7601196116666748181",
+  "dur": 3.4
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 35.4,
+    "end": 37.1,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 56.6,
+  "hook_perdido": false,
+  "justificativa": "Há apenas uma menção rápida à palavra preço no meio do vídeo que pode ser cortada sem prejudicar o restante do conteúdo.",
+  "hook_sugerido": null,
+  "name": "@dedivapradivas--7677973177355750676",
+  "dur": 58.3
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 16.8,
+    "motivo": "ambos"
+   },
+   {
+    "start": 51.6,
+    "end": 61.5,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 34.4,
+  "hook_perdido": true,
+  "justificativa": "As menções a promoção e TikTok Shop estão apenas no início e no final, permitindo aproveitar um miolo contínuo de mais de 34 segundos sobre os detalhes da bolsa.",
+  "hook_sugerido": "Gente, simplesmente apaixonada pela Touch Mini Clear da Gocase, olha a perfeição dessa bolsa!",
+  "name": "@gaeltrombini--7668144889531501845",
+  "dur": 61.5
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 44.8,
+  "hook_perdido": false,
+  "justificativa": "O vídeo não possui nenhuma menção a preço ou TikTok, sendo a menção a carrinho referente a carrinho de bebê.",
+  "hook_sugerido": null,
+  "name": "@geovanatellesugc--7670151632759426324",
+  "dur": 44.8
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 1.8,
+    "motivo": "preco"
+   },
+   {
+    "start": 34.5,
+    "end": 43.2,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 32.5,
+  "hook_perdido": true,
+  "justificativa": "Cortes aplicados apenas no início e no fim para remover menções a desconto, frete grátis e TikTok Shop, preservando um miolo rico em detalhes do produto.",
+  "hook_sugerido": "Essa mala da Gocase vai comigo para todo canto, olha só como ela é perfeita por dentro!",
+  "name": "@gizelly.bicalho--7660214200899259669",
+  "dur": 43.2
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.3,
+    "end": 9.6,
+    "motivo": "ambos"
+   },
+   {
+    "start": 25.0,
+    "end": 30.0,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 14.4,
+  "hook_perdido": true,
+  "justificativa": "O início cita preço específico e 'carrinho laranja', e o final menciona preço novamente, deixando o miolo demonstrativo de 14.4s totalmente limpo e utilizável.",
+  "hook_sugerido": "Esse é o organizador de bolsa da Gocase que vai salvar a sua rotina!",
+  "name": "@ingridsevilha_--7662454028206394625",
+  "dur": 30.0
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 4.4,
+    "motivo": "plataforma"
+   },
+   {
+    "start": 22.4,
+    "end": 56.7,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 17.5,
+  "hook_perdido": true,
+  "justificativa": "O início cita o TikTok Shop e toda a metade final cita o TikTok, carrinho laranja e comparações de preço, restando um miolo limpo e demonstrativo de 17.5s.",
+  "hook_sugerido": "Gente, vocês precisam ver de perto a nova necessaire puffer da Gocase!",
+  "name": "@isa.mgalindo--7628704237576391956",
+  "dur": 56.7
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 3.5,
+    "end": 14.5,
+    "motivo": "preco"
+   },
+   {
+    "start": 25.0,
+    "end": 29.8,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 50.9,
+  "hook_perdido": false,
+  "justificativa": "O hook inicial foi preservado e foram removidas as menções a promoção relâmpago, valores pagos e indicação de link na tela.",
+  "hook_sugerido": null,
+  "name": "@isa.mgalindo--7679638702460521748",
+  "dur": 66.7
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 84.4,
+  "hook_perdido": false,
+  "justificativa": "O vídeo é um comparativo de produtos sem nenhuma menção a preços, descontos ou termos do TikTok.",
+  "hook_sugerido": null,
+  "name": "@isadorastream--7649199131755384081",
+  "dur": 84.4
+ },
+ {
+  "categoria": "RENARRAR",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 8.7,
+    "motivo": "ambos"
+   },
+   {
+    "start": 14.9,
+    "end": 18.1,
+    "motivo": "preco"
+   },
+   {
+    "start": 32.3,
+    "end": 37.9,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 19.9,
+  "hook_perdido": true,
+  "justificativa": "As menções a desconto, promoção e TikTok estão espalhadas no início, meio e final do vídeo, tornando a edição retalhada e recomendando renarrar.",
+  "hook_sugerido": "Essa com certeza é uma das bolsas mais queridas da internet, e eu sou completamente apaixonada pela Touch Daily da Gocase!",
+  "name": "@isadorastream--7678343453096299777",
+  "dur": 37.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 6.2,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 35.7,
+  "hook_perdido": true,
+  "justificativa": "O início continha menções a desconto e direcionamento para link no perfil, mas cortando os primeiros 6,2s resta um review completo e contínuo de 35,7s.",
+  "hook_sugerido": "Se você treina, você precisa conhecer a minha bolsa favorita de academia da Gocase!",
+  "name": "@isadorastream--7679519819204545793",
+  "dur": 41.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.0,
+    "end": 4.1,
+    "motivo": "preco"
+   },
+   {
+    "start": 34.0,
+    "end": 37.6,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 29.9,
+  "hook_perdido": true,
+  "justificativa": "Basta cortar a menção inicial a desconto e o direcionamento para o perfil do TikTok no final, mantendo um miolo contínuo de quase 30 segundos com foco total no produto.",
+  "hook_sugerido": "Amigas, vocês precisam ver esse novo lançamento de bolsa que virou a minha favorita!",
+  "name": "@isadorastream--7679573315031141633",
+  "dur": 37.6
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 20.7,
+    "motivo": "ambos"
+   },
+   {
+    "start": 51.7,
+    "end": 59.0,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 30.9,
+  "hook_perdido": true,
+  "justificativa": "O início e o final contêm menções a ofertas, carrinho e TikTok, restando um miolo contínuo demonstrativo e 100% limpo com mais de 30 segundos.",
+  "hook_sugerido": "Gente, vocês já conhecem a Tote Mini da Gocase? Olha só tudo o que cabe dentro dela!",
+  "name": "@jessicamesant--7680376825377213703",
+  "dur": 59.0
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 18.25,
+    "motivo": "ambos"
+   },
+   {
+    "start": 36.05,
+    "end": 39.7,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 17.7,
+  "hook_perdido": true,
+  "justificativa": "O início possui menções a desconto em dinheiro e comparação com o TikTok, e o final pede clique em link da plataforma, restando um miolo limpo com os benefícios da bolsa.",
+  "hook_sugerido": "Essa é simplesmente uma das minhas bolsas favoritas da vida: a Tote Daily da Gocase!",
+  "name": "@laizdaily--7678048634197249298",
+  "dur": 39.7
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 11.5,
+    "end": 14.7,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 15.4,
+  "hook_perdido": false,
+  "justificativa": "A menção a 'valor promocional' no final da segunda frase pode ser cortada mantendo o restante do vídeo fluido e com mais de 15s de conteúdo limpo.",
+  "hook_sugerido": null,
+  "name": "@laizdaily--7679103825562701074",
+  "dur": 18.6
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 3.3,
+    "end": 9.4,
+    "motivo": "ambos"
+   },
+   {
+    "start": 38.2,
+    "end": 46.4,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 32.1,
+  "hook_perdido": false,
+  "justificativa": "Removem-se a menção a oferta/TikTok no início e a comparação de preço/CTA final, preservando o hook inicial e todo o review da bolsa.",
+  "hook_sugerido": null,
+  "name": "@larimoraess_1--7679542981136829717",
+  "dur": 46.4
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.0,
+    "end": 10.4,
+    "motivo": "ambos"
+   },
+   {
+    "start": 25.1,
+    "end": 40.2,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 14.5,
+  "hook_perdido": true,
+  "justificativa": "O início e o final têm menções a carrinho, comparação de preço, cupons e TikTok, restando um miolo contínuo e coerente de 14.5s sobre o modelo liso da bolsa.",
+  "hook_sugerido": "Se você tá em dúvida sobre ter uma bolsa da Gocase, você precisa ver essa versão lisa!",
+  "name": "@lelehelena98--7642318404489088263",
+  "dur": 40.2
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 34.1,
+  "hook_perdido": false,
+  "justificativa": "O vídeo não menciona preço, cupom nem termos específicos da plataforma TikTok, estando pronto para veiculação.",
+  "hook_sugerido": null,
+  "name": "@leticiacarvalhss--7677783794945920277",
+  "dur": 34.1
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 13.5,
+    "motivo": "ambos"
+   },
+   {
+    "start": 45.7,
+    "end": 51.8,
+    "motivo": "ambos"
+   },
+   {
+    "start": 65.5,
+    "end": 71.0,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 45.5,
+  "hook_perdido": true,
+  "justificativa": "Há menções a preço e TikTok no início, meio e fim, mas removendo esses trechos sobram 45 segundos de review consistente sobre as qualidades e uso da mala.",
+  "hook_sugerido": "Olha o tamanho dessa mala de viagem da Gocase, amigas, vocês não têm noção de quanta coisa cabe nela!",
+  "name": "@linckdari--7636907740090141972",
+  "dur": 71.0
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 35.8,
+    "end": 46.0,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 35.5,
+  "hook_perdido": false,
+  "justificativa": "As violações de preço e menções ao TikTok Shop ocorrem apenas no final do vídeo a partir dos 35.8s, permitindo um corte final limpo.",
+  "hook_sugerido": null,
+  "name": "@luizaaturetta--7665356468580830482",
+  "dur": 46.0
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 8.5,
+  "hook_perdido": false,
+  "justificativa": "A transcrição consiste em letras de música de fundo sem nenhuma menção a preços ou à plataforma TikTok.",
+  "hook_sugerido": null,
+  "name": "@luizajessik--7678454533160275221",
+  "dur": 8.5
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 91.7,
+    "end": 100.8,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 91.7,
+  "hook_perdido": false,
+  "justificativa": "Violação de menção a desconto e cupom restrita ao final do vídeo, bastando cortar a partir de 91.70s.",
+  "hook_sugerido": null,
+  "name": "@marcela.castro--7658792745066106130",
+  "dur": 100.8
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 16.6,
+    "motivo": "ambos"
+   },
+   {
+    "start": 56.4,
+    "end": 61.9,
+    "motivo": "preco"
+   },
+   {
+    "start": 79.0,
+    "end": 80.3,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 56.4,
+  "hook_perdido": true,
+  "justificativa": "O vídeo tem menções a preço e TikTok no início, menção a oferta no miolo e no final, restando mais de 56 segundos de conteúdo limpo e coerente.",
+  "hook_sugerido": "Amiga, você não tem noção do tamanho dessa bolsa nova da Gocase!",
+  "name": "@marigomess_creator--7669118931344362759",
+  "dur": 80.3
+ },
+ {
+  "categoria": "CORTE_MIOLO",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 11.9,
+    "motivo": "ambos"
+   },
+   {
+    "start": 48.1,
+    "end": 58.9,
+    "motivo": "ambos"
+   },
+   {
+    "start": 77.6,
+    "end": 84.9,
+    "motivo": "preco"
+   }
+  ],
+  "sobra_s": 55.0,
+  "hook_perdido": true,
+  "justificativa": "O vídeo possui menções a preço e TikTok no início, meio e fim, mas removendo esses trechos sobram dois blocos grandes e muito coerentes de review do produto.",
+  "hook_sugerido": "Amiga, você não tem noção do tanto que essa bolsa da Gocase cabe coisa!",
+  "name": "@marigomess_creator--7681652015918861586",
+  "dur": 84.9
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 52.4,
+    "end": 67.1,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 52.2,
+  "hook_perdido": false,
+  "justificativa": "O trecho de 52.40s até o final cita TikTok, comparação de preço e CTA de sacolinha, podendo ser podado mantendo 52.2s de vídeo contínuo e coerente.",
+  "hook_sugerido": null,
+  "name": "@mfandradeo--7657621149966306578",
+  "dur": 67.1
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 10.7,
+  "hook_perdido": false,
+  "justificativa": "O vídeo não contém nenhuma menção a preço, promoção ou à plataforma TikTok.",
+  "hook_sugerido": null,
+  "name": "@nagomesx--7679572213367934229",
+  "dur": 10.7
+ },
+ {
+  "name": "@nagomesx--7680249512371195157",
+  "dur": 0.0,
+  "categoria": "SEM_FALA",
+  "remover": [],
+  "sobra_s": 0.0,
+  "hook_perdido": true,
+  "justificativa": "nenhuma fala detectada no audio",
+  "hook_sugerido": ""
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 13.3,
+  "hook_perdido": false,
+  "justificativa": "O áudio contém apenas trechos de uma música, sem nenhuma menção a preços ou ao TikTok.",
+  "hook_sugerido": null,
+  "name": "@nagomesx--7680921734027037972",
+  "dur": 13.3
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 55.7,
+  "hook_perdido": false,
+  "justificativa": "O vídeo foca exclusivamente nas características, compartimentos e qualidade da mochila Gocase, sem nenhuma menção a preço ou TikTok.",
+  "hook_sugerido": null,
+  "name": "@nandaliveshop--7681836072187235604",
+  "dur": 55.7
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.2,
+    "end": 6.2,
+    "motivo": "ambos"
+   },
+   {
+    "start": 33.6,
+    "end": 48.1,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 27.2,
+  "hook_perdido": true,
+  "justificativa": "As menções a promoção, TikTok Shop e carrinho estão concentradas no hook inicial e no encerramento, mantendo um miolo explicativo contínuo de 27.2s.",
+  "hook_sugerido": "Essa é simplesmente a bolsa perfeita para você levar na faculdade, em viagens e no dia a dia!",
+  "name": "@natalilemos--7681035538748525832",
+  "dur": 48.1
+ },
+ {
+  "categoria": "LIMPO",
+  "remover": [],
+  "sobra_s": 21.5,
+  "hook_perdido": false,
+  "justificativa": "O áudio não contém menções a preços, descontos ou referências ao TikTok Shop.",
+  "hook_sugerido": null,
+  "name": "@povsdalana--7599428812710956308",
+  "dur": 21.5
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.0,
+    "end": 15.2,
+    "motivo": "ambos"
+   },
+   {
+    "start": 50.8,
+    "end": 64.7,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 35.6,
+  "hook_perdido": true,
+  "justificativa": "O início e o final contêm menções a carrinho laranja, preços e promoções, restando um miolo limpo e contínuo com review completo do produto.",
+  "hook_sugerido": "Amigas, vocês precisam conhecer a Tote Day da Gocase, que virou a minha mais nova queridinha!",
+  "name": "@rafaellaescorel--7680569037943737618",
+  "dur": 64.7
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 41.3,
+    "end": 42.8,
+    "motivo": "plataforma"
+   }
+  ],
+  "sobra_s": 41.3,
+  "hook_perdido": false,
+  "justificativa": "O vídeo só possui menção a 'link aqui embaixo' no finalzinho, permitindo um corte simples na ponta que preserva mais de 40 segundos de conteúdo útil.",
+  "hook_sugerido": null,
+  "name": "@sougabrielaneves--7621669130621652232",
+  "dur": 42.8
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 7.7,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 18.3,
+  "hook_perdido": true,
+  "justificativa": "O início compara preços e cita o carrinho laranja do TikTok Shop, mas o restante do vídeo foca nas qualidades do produto e tem mais de 18 segundos contínuos.",
+  "hook_sugerido": "Gente, para tudo e vem ver de perto essa mochila maternidade da Gocase que é perfeita!",
+  "name": "@terezadelgado1--7672787262253387029",
+  "dur": 26.3
+ },
+ {
+  "categoria": "TRIM",
+  "remover": [
+   {
+    "start": 0.1,
+    "end": 10.7,
+    "motivo": "preco"
+   },
+   {
+    "start": 33.4,
+    "end": 37.8,
+    "motivo": "ambos"
+   }
+  ],
+  "sobra_s": 22.4,
+  "hook_perdido": true,
+  "justificativa": "O início faz comparação de preços e o final menciona carrinho laranja e promoção, restando mais de 22 segundos de apresentação do produto no miolo.",
+  "hook_sugerido": "Essa é simplesmente a mochila de maternidade mais prática e espaçosa que já inventaram, amigas!",
+  "name": "@terezadelgado1--7680257523697356053",
+  "dur": 37.8
+ }
+]
