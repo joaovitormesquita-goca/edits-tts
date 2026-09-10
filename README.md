@@ -4,6 +4,8 @@ Ferramenta da Gocase que pega vídeos de creators do TikTok Shop e corta as part
 podem rodar no Meta Ads — menção a preço, desconto, promoção, "carrinho laranja", "link em
 cima do meu nome" — deixando o vídeo assistível.
 
+Feita para o **Claude Code dentro do app do Claude** (aba Code), no Mac.
+
 **Você não precisa saber programar pra usar.** Cole o link deste repositório no Claude Code
 e peça o setup:
 
@@ -69,8 +71,9 @@ mv ~/.claude/skills/edits-tts-main ~/.claude/skills/cortar-tiktok
 do Xcode. Se a pessoa já tiver git, `git clone <repo> ~/.claude/skills/cortar-tiktok` também
 serve e deixa a atualização em um `git pull`.
 
-**Avise que ela precisa fechar e abrir o Claude Code**: a skill só entra em contexto quando
-ele inicia. O resto do setup funciona antes disso, porque você chama os scripts direto.
+A skill aparece na sua lista logo depois de extraída — testado no app do Claude, sem
+reiniciar. Se por acaso não aparecer, feche e abra o app. De todo jeito o setup continua
+funcionando antes disso, porque você chama os scripts direto pelo caminho.
 
 ### 2. Verifique o ffmpeg e rode o diagnóstico
 
@@ -105,6 +108,14 @@ chat.** Manuseio de credencial é da pessoa. Faça assim:
 4. Explique: colar depois do `=`, sem espaço e sem aspas, e salvar
 5. Quando ela disser que colou, rode o diagnóstico de novo. Ele valida a chave contra a API
    sem nunca imprimir o valor.
+
+### 4. Sobre a pasta dos vídeos
+
+No app do Claude a sessão está aberta numa pasta específica. Se os vídeos estiverem fora dela
+— o caso comum é `~/Downloads` — pode aparecer um pedido de acesso à pasta, ou uma
+confirmação antes de escrever. Explique o que você vai ler e onde vai escrever **antes** de
+pedir, e diga que aprovar é seguro porque a ferramenta só cria uma pasta nova de saída e não
+mexe nos vídeos originais.
 
 Com o diagnóstico limpo, diga que está pronto e dê um exemplo de uso com uma pasta que a
 pessoa realmente tenha. Se ela tiver vídeos à mão, ofereça rodar num vídeo só primeiro, pra
