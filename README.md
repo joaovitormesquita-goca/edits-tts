@@ -5,7 +5,7 @@ podem rodar no Meta Ads — menção a preço, desconto, promoção, "carrinho l
 cima do meu nome" — deixando o vídeo assistível.
 
 **Você não precisa saber programar pra usar.** Cole o link deste repositório no Claude Code
-e peça o setup; ele instala o que dá pra instalar e te guia no resto.
+e peça o setup:
 
 ```
 aqui está o link do repo: github.com/joaovitormesquita-goca/edits-tts
@@ -49,51 +49,45 @@ ele nunca mostra a chave, só confirma se ela funciona.
 > Esta seção é para o agente. Se você é uma pessoa lendo, pode pular — o Claude segue estes
 > passos por você.
 
-Quando alguém te apontar este repositório pedindo setup, execute nesta ordem. Explique cada
-passo em linguagem simples antes de rodar: a pessoa provavelmente não é técnica e vai se
-assustar com saída de terminal sem contexto.
+São três passos e caminhos fixos. Explique cada um em linguagem simples antes de rodar: a
+pessoa provavelmente não é técnica e vai se assustar com saída de terminal sem contexto.
 
-### 1. Verifique o ffmpeg
+### 1. Instale a ferramenta
+
+Ela vive em `~/.claude/skills/cortar-tiktok/`, que o Claude Code lê sozinho ao iniciar. Não
+há plugin pra registrar, nem marketplace, nem cache, nem versão no caminho.
 
 ```bash
-ffmpeg -version
+mkdir -p ~/.claude/skills
+curl -sL https://github.com/joaovitormesquita-goca/edits-tts/archive/refs/heads/main.tar.gz \
+  | tar xz -C ~/.claude/skills
+rm -rf ~/.claude/skills/cortar-tiktok
+mv ~/.claude/skills/edits-tts-main ~/.claude/skills/cortar-tiktok
 ```
 
-Se não existir, o ffmpeg é o programa que corta o vídeo — sem ele nada funciona. Instale com
+`curl` e `tar` já vêm no macOS — não precisa de git nem das ferramentas de linha de comando
+do Xcode. Se a pessoa já tiver git, `git clone <repo> ~/.claude/skills/cortar-tiktok` também
+serve e deixa a atualização em um `git pull`.
+
+**Avise que ela precisa fechar e abrir o Claude Code**: a skill só entra em contexto quando
+ele inicia. O resto do setup funciona antes disso, porque você chama os scripts direto.
+
+### 2. Verifique o ffmpeg e rode o diagnóstico
+
+```bash
+python3 ~/.claude/skills/cortar-tiktok/scripts/checar.py
+```
+
+Ele confere ffmpeg, Python, a chave e a instalação, e imprime o que falta com o passo a passo
+de cada pendência. Sai com código 0 quando está tudo pronto.
+
+Se faltar o ffmpeg — é o programa que corta o vídeo, sem ele nada funciona — instale com
 `brew install ffmpeg`, avisando antes que vai instalar um programa e que leva alguns minutos.
 Se o `brew` também não existir, **não instale o Homebrew por conta própria**: mande a pessoa
 em https://brew.sh e espere, porque essa instalação pede a senha do usuário e é ela que
 precisa digitar.
 
-### 2. Instale o plugin
-
-```bash
-claude plugin marketplace add joaovitormesquita-goca/edits-tts
-claude plugin install cortar-tiktok@edits-tts
-```
-
-Isso baixa a skill pro cache local. Nenhuma dependência de Python é necessária — os scripts
-usam só biblioteca padrão.
-
-### 3. Rode o diagnóstico
-
-Localize o script. O caminho tem a **versão** no meio, e versões antigas ficam no cache
-depois de uma atualização — então não presuma caminho fixo e não pegue o primeiro que
-aparecer: ordene por data e use o mais recente.
-
-```bash
-find ~/.claude/plugins/cache -path "*cortar-tiktok*" -name checar.py -print0 \
-  | xargs -0 ls -t | head -1
-```
-
-Rode o caminho que sair daí com `python3`. Vale o mesmo pro `pipeline.py` e o
-`verificar.py` — sempre o mais recente, senão você roda uma versão velha da ferramenta
-sem perceber (acontece: dá erro nenhum, só se comporta como a versão antiga).
-
-Ele confere ffmpeg, Python, a chave e o plugin, e imprime o que falta com o passo a passo de
-cada pendência. Sai com código 0 quando está tudo pronto.
-
-### 4. Conduza a pessoa na chave da API
+### 3. Conduza a pessoa na chave da API
 
 Se o diagnóstico disser que falta a chave, **não tente resolver sozinho e não peça a chave no
 chat.** Manuseio de credencial é da pessoa. Faça assim:
@@ -101,7 +95,7 @@ chat.** Manuseio de credencial é da pessoa. Faça assim:
 1. Diga que falta a chave, que ela vem do AI Proxy da Gocase, e o porquê de você não poder
    fazer essa parte (é uma credencial dela, e colar no chat deixaria a chave gravada no
    histórico da conversa)
-2. Crie o arquivo vazio com a linha pronta pra ela completar, e restrinja a leitura:
+2. Crie o arquivo com a linha pronta pra ela completar, e restrinja a leitura:
    ```bash
    mkdir -p ~/.claude
    [ -f ~/.claude/.env ] || printf 'GEMINI_API_KEY=\n' > ~/.claude/.env
@@ -112,61 +106,42 @@ chat.** Manuseio de credencial é da pessoa. Faça assim:
 5. Quando ela disser que colou, rode o diagnóstico de novo. Ele valida a chave contra a API
    sem nunca imprimir o valor.
 
-### 5. Confirme e mostre como usar
+Com o diagnóstico limpo, diga que está pronto e dê um exemplo de uso com uma pasta que a
+pessoa realmente tenha. Se ela tiver vídeos à mão, ofereça rodar num vídeo só primeiro, pra
+ela ver o resultado antes de confiar num lote inteiro.
 
-Com o diagnóstico limpo, diga que está pronto e dê um exemplo concreto de uso — de
-preferência com uma pasta que a pessoa realmente tenha. Se ela tiver vídeos à mão, ofereça
-rodar num vídeo só primeiro, pra ela ver o resultado antes de confiar num lote inteiro.
+### Os três comandos, para referência
+
+Caminhos fixos — não precisa procurar nada:
+
+```bash
+python3 ~/.claude/skills/cortar-tiktok/scripts/checar.py                    # diagnóstico
+python3 ~/.claude/skills/cortar-tiktok/scripts/pipeline.py <pasta>          # cortar
+python3 ~/.claude/skills/cortar-tiktok/scripts/verificar.py <pasta_saida>   # conferir
+```
 
 ### Atualizar depois
 
-Não existe `claude plugin update`. Como o cache só é refeito quando a `version` do
-`plugin.json` muda, a sequência é:
-
-```bash
-claude plugin marketplace update edits-tts
-claude plugin uninstall cortar-tiktok@edits-tts
-claude plugin install cortar-tiktok@edits-tts
-```
+Mesma instalação de novo (o `rm -rf` no meio troca a versão antiga), ou `git pull` dentro de
+`~/.claude/skills/cortar-tiktok` se a instalação foi por git. As regras que a pessoa escreveu
+não são afetadas: moram em `~/.claude/cortar-tiktok/regras.md` e nas pastas de lote, fora da
+pasta da skill.
 
 ---
 
 ## Para quem mantém o repo
 
-Ao publicar mudança na skill, **bumpe `version` em
-`plugins/cortar-tiktok/.claude-plugin/plugin.json`**. Sem isso o cache de quem já instalou não
-é refeito e a correção não chega em ninguém — testado, é assim que se comporta.
-
-Valide o manifesto antes de publicar:
-
-```bash
-claude plugin validate .
-```
-
-Estrutura:
+A raiz do repositório **é** a pasta da skill: `SKILL.md`, `references/` e `scripts/` ficam no
+topo, porque a instalação é um `tar xz` direto em `~/.claude/skills/cortar-tiktok/`.
 
 ```
-.claude-plugin/marketplace.json          catálogo do marketplace
-plugins/cortar-tiktok/
-├── .claude-plugin/plugin.json           manifesto e VERSÃO
-└── skills/cortar-tiktok/
-    ├── SKILL.md                         quando aciona e como rodar
-    ├── references/regras-gocase.md      o que sai, o que fica, armadilhas
-    └── scripts/                         pipeline, verificador, diagnóstico
-docs/levantamento-2026-09-10.json        triagem dos 59 vídeos do acervo inicial
+SKILL.md                             quando aciona e como rodar
+references/regras-gocase.md          o que sai, o que fica, armadilhas
+references/regras-locais-exemplo.md  modelo pro time escrever as regras dele
+scripts/                             pipeline, verificador, diagnóstico
+docs/levantamento-2026-09-10.json    triagem dos 59 vídeos do acervo inicial
 ```
 
-Para registrar o marketplace automaticamente em quem já usa um repo do time, adicione ao
-`.claude/settings.json` do projeto:
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "edits-tts": {
-      "source": { "source": "github", "repo": "joaovitormesquita-goca/edits-tts" }
-    }
-  }
-}
-```
-
-O repo deve ser **privado**: contém regra de negócio e a lista de termos de preço da operação.
+Mudança publicada aqui chega em quem reinstalar ou der `git pull`. Não existe cache
+intermediário, então não há versão pra bumpar — que era a principal fonte de "publiquei a
+correção e não chegou em ninguém" no desenho anterior, por plugin.

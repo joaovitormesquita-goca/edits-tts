@@ -81,23 +81,19 @@ else:
             f"A chave existe mas foi recusada ({type(e).__name__}). Provavelmente foi copiada\n"
             "     incompleta, esta com espaco sobrando, ou foi revogada. Peca uma nova.")
 
-# 4. o plugin instalado
-try:
-    r = subprocess.run(["claude", "plugin", "marketplace", "list"],
-                       capture_output=True, text=True, timeout=30)
-    saida = (r.stdout or "") + (r.stderr or "")
-    if "edits-tts" in saida:
-        diz(OK, "marketplace edits-tts registrado")
-    else:
-        diz(FALTA, "o plugin cortar-tiktok ainda nao foi instalado")
-        problemas.append(
-            "Instalar o plugin. No Terminal:\n"
-            "       claude plugin marketplace add joaovitormesquita-goca/edits-tts\n"
-            "       claude plugin install cortar-tiktok@edits-tts")
-except FileNotFoundError:
-    diz(AVISO, "nao achei o comando 'claude' — talvez esteja rodando fora do Claude Code")
-except Exception:
-    diz(AVISO, "nao consegui checar os plugins instalados")
+# 4. a skill instalada no lugar certo
+SKILL_DIR = os.path.expanduser("~/.claude/skills/cortar-tiktok")
+if os.path.exists(os.path.join(SKILL_DIR, "SKILL.md")):
+    diz(OK, f"skill instalada em ~/.claude/skills/cortar-tiktok")
+else:
+    diz(FALTA, "a ferramenta ainda nao esta instalada")
+    problemas.append(
+        "Instalar a ferramenta. Uma linha no Terminal:\n"
+        "       mkdir -p ~/.claude/skills && curl -sL "
+        "https://github.com/joaovitormesquita-goca/edits-tts/archive/refs/heads/main.tar.gz "
+        "| tar xz -C ~/.claude/skills && mv ~/.claude/skills/edits-tts-main "
+        "~/.claude/skills/cortar-tiktok\n"
+        "     Depois FECHE E ABRA o Claude Code: a skill so e' lida quando ele inicia.")
 
 print()
 if problemas:

@@ -110,7 +110,7 @@ um ponto de corte final anterior.
 
 ## Camadas: base, pessoa, lote
 
-Este arquivo é a **base** — versionada no repo, chega no time por atualização do plugin.
+Este arquivo é a **base** — versionada no repo, chega no time quando a ferramenta é atualizada.
 Em cima dela cada pessoa escreve as suas, em português, sem tocar em código:
 
 1. **base** (aqui, e no prompt do `classify.py`)
@@ -120,8 +120,8 @@ Em cima dela cada pessoa escreve as suas, em português, sem tocar em código:
 Somam de cima pra baixo; no conflito, o mais específico ganha. Modelo comentado para copiar:
 `references/regras-locais-exemplo.md`.
 
-Os arquivos 2 e 3 ficam fora do plugin porque o cache é recriado a cada versão nova — regra
-escrita dentro do plugin seria apagada na primeira atualização.
+Os arquivos 2 e 3 ficam fora da pasta da skill porque atualizar a ferramenta substitui essa
+pasta — regra escrita lá dentro seria perdida.
 
 ### Núcleo travado
 

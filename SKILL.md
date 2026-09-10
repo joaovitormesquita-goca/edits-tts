@@ -28,7 +28,7 @@ Duas coisas precisam existir:
 
 1. **ffmpeg** instalado (`ffmpeg -version`). Se faltar: `brew install ffmpeg`.
 2. **`GEMINI_API_KEY`**, em `.env` na raiz do projeto **ou** em `~/.claude/.env` (este
-   segundo funciona de qualquer pasta, útil quando a skill vem instalada como plugin):
+   segundo funciona de qualquer pasta, o caso normal, já que a ferramenta é instalada fora do projeto):
    ```
    GEMINI_API_KEY=<a chave>
    ```
@@ -39,17 +39,15 @@ Python: só biblioteca padrão. Não precisa instalar dependência nenhuma.
 
 ## Como rodar
 
-Os scripts ficam na pasta `scripts/` ao lado deste `SKILL.md`. Use o caminho da própria skill
-— ele muda conforme a instalação (dentro do projeto em `.claude/skills/cortar-tiktok/`, ou no
-cache de plugins quando distribuída via marketplace), então não presuma um caminho fixo:
-resolva a partir de onde este arquivo está.
-
 Um comando, apontando pra pasta com os vídeos crus (procura `.mp4` recursivamente, então
 pasta com subpastas por data funciona):
 
 ```bash
-python <pasta_da_skill>/scripts/pipeline.py <pasta_de_entrada>
+python3 ~/.claude/skills/cortar-tiktok/scripts/pipeline.py <pasta_de_entrada>
 ```
+
+O caminho é fixo: a ferramenta é instalada em `~/.claude/skills/cortar-tiktok/`. Se por algum
+motivo ela não estiver lá, os scripts também funcionam a partir de onde este `SKILL.md` está.
 
 Saída padrão: `<pasta_de_entrada>/../cortados`. Para escolher outra, use `--out <pasta>`.
 Para mais paralelismo nas chamadas de API, `--jobs 6`.
@@ -65,7 +63,7 @@ e tempo à toa.
 A checagem que vale é re-transcrever a saída e reler:
 
 ```bash
-python <pasta_da_skill>/scripts/verificar.py <pasta_de_saida>
+python3 ~/.claude/skills/cortar-tiktok/scripts/verificar.py <pasta_de_saida>
 ```
 
 Por padrão confere uma amostra, priorizando os vídeos com mais emendas (onde o risco é maior).
@@ -114,13 +112,13 @@ código. O pipeline lê dois arquivos, se existirem, e os soma à regra base:
 Também dá pra passar um avulso com `--regras <arquivo>`. Se houver conflito, o mais
 específico ganha: pessoa < lote < `--regras`.
 
-Esses arquivos moram **fora** do plugin de propósito. O cache do plugin é recriado a cada
-versão nova, então regra escrita lá dentro seria apagada na primeira atualização.
+Esses arquivos moram **fora** da pasta da skill de propósito: reinstalar ou atualizar a
+ferramenta substitui essa pasta, e regra escrita lá dentro seria perdida.
 
 Quando alguém pedir ajuda pra criar as regras dela, mostre
 `references/regras-locais-exemplo.md` — é um modelo comentado pra copiar. E se o pedido dela
 for **capacidade nova** (legenda, upscale, re-narração) e não critério de corte, isso não é
-regra: é uma skill nova, e deve entrar como outro plugin no marketplace.
+regra: é uma skill nova, e deve viver na própria pasta em `~/.claude/skills/`.
 
 ### O núcleo é travado
 

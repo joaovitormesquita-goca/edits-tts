@@ -44,7 +44,7 @@ def load_key():
         v = _busca_env(origem)
         if v:
             return v
-    # instalada como plugin, a skill vive fora do projeto: aceita chave no home
+    # a skill vive em ~/.claude/skills, fora do projeto: aceita chave no home
     for p in (os.path.expanduser("~/.claude/.env"), os.path.expanduser("~/.gocase.env")):
         if os.path.exists(p):
             for line in open(p):
@@ -65,9 +65,9 @@ def load_key():
 
 # --- regras em camadas ---------------------------------------------------
 # A regra base vive no prompt do classify.py (versionada, chega por atualizacao
-# do plugin). Em cima dela, cada pessoa pode escrever a sua. Esses arquivos
-# ficam FORA do cache do plugin de proposito: o cache e' recriado a cada versao
-# nova, e regra escrita lá dentro seria apagada na primeira atualizacao.
+# versionado no repo). Em cima dela, cada pessoa pode escrever a sua. Esses arquivos
+# ficam FORA da pasta da skill de proposito: atualizar a ferramenta substitui essa
+# pasta, e regra escrita lá dentro seria perdida.
 REGRAS_PESSOA = os.path.expanduser("~/.claude/cortar-tiktok/regras.md")
 REGRAS_LOTE   = "regras.md"   # dentro da pasta de entrada, vale so pra aquele lote
 

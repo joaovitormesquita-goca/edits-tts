@@ -1,8 +1,0 @@
-{
-  "name": "cortar-tiktok",
-  "description": "Corta vídeos de creators do TikTok Shop para rodar no Meta Ads, removendo menção a preço, desconto e à plataforma TikTok (carrinho laranja, link em cima do nome).",
-  "version": "1.1.1",
-  "author": {
-    "name": "Gocase — Growth/Mídia"
-  }
-}
