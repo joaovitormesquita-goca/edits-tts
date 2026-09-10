@@ -4,7 +4,8 @@ Ferramenta da Gocase que pega vídeos de creators do TikTok Shop e corta as part
 podem rodar no Meta Ads — menção a preço, desconto, promoção, "carrinho laranja", "link em
 cima do meu nome" — deixando o vídeo assistível.
 
-Feita para o **Claude Code dentro do app do Claude** (aba Code), no Mac.
+Feita para o **Claude Code dentro do app do Claude** (aba Code), no **Mac e no Windows**.
+Também roda em Linux.
 
 **Você não precisa saber programar pra usar.** Cole o link deste repositório no Claude Code
 e peça o setup:
@@ -59,6 +60,8 @@ pessoa provavelmente não é técnica e vai se assustar com saída de terminal s
 Ela vive em `~/.claude/skills/cortar-tiktok/`, que o Claude Code lê sozinho ao iniciar. Não
 há plugin pra registrar, nem marketplace, nem cache, nem versão no caminho.
 
+**Descubra o sistema primeiro** — os comandos divergem. Em macOS/Linux:
+
 ```bash
 mkdir -p ~/.claude/skills
 curl -sL https://github.com/joaovitormesquita-goca/edits-tts/archive/refs/heads/main.tar.gz \
@@ -67,9 +70,19 @@ rm -rf ~/.claude/skills/cortar-tiktok
 mv ~/.claude/skills/edits-tts-main ~/.claude/skills/cortar-tiktok
 ```
 
-`curl` e `tar` já vêm no macOS — não precisa de git nem das ferramentas de linha de comando
-do Xcode. Se a pessoa já tiver git, `git clone <repo> ~/.claude/skills/cortar-tiktok` também
-serve e deixa a atualização em um `git pull`.
+No Windows, em PowerShell (não use `cmd`: o `~` não expande lá):
+
+```powershell
+mkdir -Force ~\.claude\skills
+curl.exe -sL https://github.com/joaovitormesquita-goca/edits-tts/archive/refs/heads/main.tar.gz -o $env:TEMP\e.tgz
+tar.exe xzf $env:TEMP\e.tgz -C ~\.claude\skills
+Remove-Item -Recurse -Force ~\.claude\skills\cortar-tiktok -EA 0
+Move-Item ~\.claude\skills\edits-tts-main ~\.claude\skills\cortar-tiktok
+```
+
+`curl` e `tar` já vêm nos dois sistemas — no macOS sem precisar das ferramentas de linha de
+comando do Xcode, no Windows desde o 10. Não precisa de git. Se a pessoa já tiver git,
+`git clone <repo> <destino>` também serve e deixa a atualização em um `git pull`.
 
 A skill aparece na sua lista logo depois de extraída — testado no app do Claude, sem
 reiniciar. Se por acaso não aparecer, feche e abra o app. De todo jeito o setup continua
@@ -81,14 +94,26 @@ funcionando antes disso, porque você chama os scripts direto pelo caminho.
 python3 ~/.claude/skills/cortar-tiktok/scripts/checar.py
 ```
 
+No Windows o executável costuma ser `python` (sem o 3) e o caminho usa `\`:
+`python $env:USERPROFILE\.claude\skills\cortar-tiktok\scripts\checar.py`. Se `python` abrir
+a loja da Microsoft, o Python não está instalado — baixe em python.org e marque
+**Add python.exe to PATH** no instalador.
+
 Ele confere ffmpeg, Python, a chave e a instalação, e imprime o que falta com o passo a passo
 de cada pendência. Sai com código 0 quando está tudo pronto.
 
-Se faltar o ffmpeg — é o programa que corta o vídeo, sem ele nada funciona — instale com
-`brew install ffmpeg`, avisando antes que vai instalar um programa e que leva alguns minutos.
-Se o `brew` também não existir, **não instale o Homebrew por conta própria**: mande a pessoa
-em https://brew.sh e espere, porque essa instalação pede a senha do usuário e é ela que
-precisa digitar.
+Se faltar o ffmpeg — é o programa que corta o vídeo, sem ele nada funciona — o próprio
+diagnóstico imprime o comando certo pro sistema da pessoa. Avise antes que vai instalar um
+programa e que leva alguns minutos.
+
+- **macOS**: `brew install ffmpeg`. Se o `brew` não existir, **não instale o Homebrew por
+  conta própria**: mande a pessoa em https://brew.sh e espere, porque essa instalação pede a
+  senha do usuário e é ela que precisa digitar.
+- **Windows**: `winget install Gyan.FFmpeg`. Depois **feche e abra o PowerShell e o app do
+  Claude** — o programa novo só aparece no PATH em processo novo. Esse é o tropeço mais comum
+  no Windows: instala, o diagnóstico continua dizendo que falta, e parece que não funcionou.
+- **Linux**: `sudo apt install ffmpeg` ou o equivalente da distro; pede senha, então é a
+  pessoa que roda.
 
 ### 3. Conduza a pessoa na chave da API
 
@@ -105,7 +130,8 @@ chat.** Manuseio de credencial é da pessoa. Faça assim:
    chmod 600 ~/.claude/.env
    ```
 3. Abra o arquivo pra ela colar: `open -e ~/.claude/.env`
-4. Explique: colar depois do `=`, sem espaço e sem aspas, e salvar
+4. Explique: colar depois do `=`, sem espaço e sem aspas, e salvar. No Windows o comando pra
+   abrir é `notepad $env:USERPROFILE\.claude\.env`
 5. Quando ela disser que colou, rode o diagnóstico de novo. Ele valida a chave contra a API
    sem nunca imprimir o valor.
 
@@ -130,6 +156,8 @@ python3 ~/.claude/skills/cortar-tiktok/scripts/checar.py                    # di
 python3 ~/.claude/skills/cortar-tiktok/scripts/pipeline.py <pasta>          # cortar
 python3 ~/.claude/skills/cortar-tiktok/scripts/verificar.py <pasta_saida>   # conferir
 ```
+
+No Windows troque `python3` por `python` e a raiz por `$env:USERPROFILE\.claude\skills\...`.
 
 ### Atualizar depois
 

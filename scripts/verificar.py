@@ -56,7 +56,7 @@ def main():
     rel = {}
     rp = os.path.join(out, "_relatorio.json")
     if os.path.exists(rp):
-        rel = {r["name"]: r for r in json.load(open(rp))}
+        rel = {r["name"]: r for r in json.load(open(rp, encoding="utf-8"))}
     def risco(p):
         r = rel.get(os.path.splitext(os.path.basename(p))[0], {})
         return (-(r.get("n_segs") or 1), -(r.get("dur", 0) - r.get("saida", 0)))
@@ -72,7 +72,7 @@ def main():
                            capture_output=True)
         tx = os.path.join(V, n + ".json")
         if not os.path.exists(tx):
-            json.dump(transcribe(mp3), open(tx, "w"), ensure_ascii=False)
+            json.dump(transcribe(mp3), open(tx, "w", encoding="utf-8"), ensure_ascii=False)
         c = classify(tx, n)
         d = norm.load(tx)
         return n, c, d

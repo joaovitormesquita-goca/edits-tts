@@ -26,14 +26,16 @@ decisão consciente de manter o básico bem feito antes de complicar.
 
 Duas coisas precisam existir:
 
-1. **ffmpeg** instalado (`ffmpeg -version`). Se faltar: `brew install ffmpeg`.
+1. **ffmpeg** instalado (`ffmpeg -version`). Se faltar: `brew install ffmpeg` no macOS,
+   `winget install Gyan.FFmpeg` no Windows (e reabrir o terminal e o app depois, senão o
+   PATH não pega), `sudo apt install ffmpeg` no Linux.
 2. **`GEMINI_API_KEY`**, em `.env` na raiz do projeto **ou** em `~/.claude/.env` (este
    segundo funciona de qualquer pasta, o caso normal, já que a ferramenta é instalada fora do projeto):
    ```
    GEMINI_API_KEY=<a chave>
    ```
-   Nunca peça a chave por chat nem escreva ela via `echo`/`export` no terminal — vai parar no
-   histórico do shell. O arquivo deve estar no `.gitignore` e com permissão `600`.
+   Nunca peça a chave por chat nem escreva ela por linha de comando (`echo`, `export`,
+   `$env:`) — nos dois casos ela fica gravada em histórico. O arquivo deve estar no `.gitignore` e com permissão `600`.
 
 Python: só biblioteca padrão. Não precisa instalar dependência nenhuma.
 
@@ -48,6 +50,11 @@ python3 ~/.claude/skills/cortar-tiktok/scripts/pipeline.py <pasta_de_entrada>
 
 O caminho é fixo: a ferramenta é instalada em `~/.claude/skills/cortar-tiktok/`. Se por algum
 motivo ela não estiver lá, os scripts também funcionam a partir de onde este `SKILL.md` está.
+
+**No Windows** o executável é `python` (sem o 3) e a raiz é
+`$env:USERPROFILE\.claude\skills\cortar-tiktok`. Confirme o sistema antes de montar o
+comando — chamar `python3` no Windows costuma abrir a loja da Microsoft em vez de dar erro,
+o que confunde quem está assistindo.
 
 Saída padrão: `<pasta_de_entrada>/../cortados`. Para escolher outra, use `--out <pasta>`.
 Para mais paralelismo nas chamadas de API, `--jobs 6`.

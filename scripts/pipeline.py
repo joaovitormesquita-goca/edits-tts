@@ -89,7 +89,7 @@ def main():
         if os.path.exists(p):
             return dict(name=n, msg=None)
         try:
-            json.dump(transcribe(f"{W}/audio/{n}.mp3"), open(p, "w"), ensure_ascii=False)
+            json.dump(transcribe(f"{W}/audio/{n}.mp3"), open(p, "w", encoding="utf-8"), ensure_ascii=False)
             return dict(name=n, msg=f"ok {n[:40]}")
         except Exception as e:
             return dict(name=n, msg=f"ERRO transcricao {n[:34]}: {type(e).__name__}")
@@ -102,7 +102,7 @@ def main():
             return dict(name=n, msg=None)
         try:
             j = classify(f"{W}/tx/{n}.json", n, pasta_entrada=ent, regras_extra=a.regras)
-            json.dump(j, open(p, "w"), ensure_ascii=False)
+            json.dump(j, open(p, "w", encoding="utf-8"), ensure_ascii=False)
             return dict(name=n, msg=f"{j['categoria']:12} {n[:38]}")
         except Exception as e:
             return dict(name=n, msg=f"ERRO classificacao {n[:32]}: {type(e).__name__}")
@@ -115,7 +115,7 @@ def main():
         cp = f"{W}/cls/{n}.json"
         if not os.path.exists(cp):
             rel.append(dict(name=n, categoria="ERRO", status="SEM_CLASSIFICACAO")); continue
-        t = json.load(open(cp))
+        t = json.load(open(cp, encoding="utf-8"))
         cat = t["categoria"]
         dst = os.path.join(out, n + ".mp4")
 
@@ -149,7 +149,8 @@ def main():
                         divergencia=round(real - tot, 2), **_proc(t)))
         print(f"   CORTADO   {t['dur']:5.1f}s -> {real:5.1f}s ({len(keep)} seg) {n[:38]}", flush=True)
 
-    json.dump(rel, open(os.path.join(out, "_relatorio.json"), "w"), ensure_ascii=False, indent=1)
+    json.dump(rel, open(os.path.join(out, "_relatorio.json"), "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1)
     escreve_relatorio(rel, out, camadas)
     resumo(rel, out)
 
@@ -184,7 +185,7 @@ def escreve_relatorio(rel, out, camadas=None):
           "", "Categorias: TRIM = sujeira nas pontas | CORTE_MIOLO = trecho no meio | "
           "LIMPO = nada a cortar | RENARRAR = corte nao resolve (descartado) | "
           "SEM_FALA = sem narracao (descartado)."]
-    open(os.path.join(out, "RELATORIO.md"), "w").write("\n".join(L) + "\n")
+    open(os.path.join(out, "RELATORIO.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
 def resumo(rel, out):
     from collections import Counter

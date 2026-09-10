@@ -19,7 +19,7 @@ def _busca_env(d):
     for _ in range(8):
         p = os.path.join(d, ".env")
         if os.path.exists(p):
-            for line in open(p):
+            for line in open(p, encoding="utf-8"):
                 line = line.strip()
                 if line.startswith("GEMINI_API_KEY="):
                     v = line.split("=", 1)[1].strip()
@@ -47,7 +47,7 @@ def load_key():
     # a skill vive em ~/.claude/skills, fora do projeto: aceita chave no home
     for p in (os.path.expanduser("~/.claude/.env"), os.path.expanduser("~/.gocase.env")):
         if os.path.exists(p):
-            for line in open(p):
+            for line in open(p, encoding="utf-8"):
                 line = line.strip()
                 if line.startswith("GEMINI_API_KEY="):
                     v = line.split("=", 1)[1].strip()
@@ -88,7 +88,7 @@ def carrega_regras(pasta_entrada=None, extra=None):
         cands.append(("regras passadas no comando", extra))
     for rotulo, caminho in cands:
         if caminho and os.path.exists(caminho):
-            txt = open(caminho).read().strip()
+            txt = open(caminho, encoding="utf-8").read().strip()
             if txt:
                 camadas.append((rotulo, caminho, txt))
     return camadas

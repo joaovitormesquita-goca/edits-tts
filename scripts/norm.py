@@ -7,7 +7,7 @@ def _sec(s):
     return float(str(s).rstrip("s")) if s is not None else None
 
 def load(path):
-    d = json.load(open(path))
+    d = json.load(open(path, encoding="utf-8"))
     steps = d.get("steps") or []
     if not steps or not steps[0].get("content"):
         return dict(text="", words=[], sents=[], dur=0.0, no_speech=True,
